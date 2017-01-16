@@ -1,0 +1,235 @@
+package org.academniadecodigo.dancedance.stage.position;
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+
+import org.academniadecodigo.dancedance.stage.Stage;
+import org.academniadecodigo.dancedance.stage.StageDirection;
+=======
+import org.academniadecodigo.dancedance.stage.GridDirection;
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+
+/**
+ * Base skelleton for a stage position
+ *
+ * @see StagePosition
+ */
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+
+    public abstract class AbstractStagePosition implements StagePosition {
+=======
+public abstract class AbstractGridPosition implements GridPosition {
+/*
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+
+        private int col;
+        private int row;
+        //private StageColor
+        // color;
+        private Stage stage;
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+        /**
+         * Construct a new stage position at a specific column and row
+         *
+         * @param col   the column of the stage position
+         * @param row   the row of the stage position
+         * @param stage  the stage in which the position will be displayed
+         */
+        public AbstractStagePosition(int col, int row, Stage stage) {
+=======
+*
+         * Construct a new grid position at a specific column and row
+         *
+         * @param col   the column of the grid position
+         * @param row   the row of the grid position
+         * @param grid  the grid in which the position will be displayed
+
+
+        public AbstractGridPosition(int col, int row, Grid grid) {
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+            this.col = col;
+            this.row = row;
+            this.stage = stage;
+            //this.color = StageColor.NO_COLOR;
+        }
+
+        public Stage getStage() {
+            return stage;
+        }
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+        /**
+         * @see StagePosition#setPos(int, int)
+         */
+=======
+*
+         * @see GridPosition#setPos(int, int)
+
+
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+        @Override
+        public void setPos(int col, int row) {
+            this.col = col;
+            this.row = row;
+            show();
+        }
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+        /**
+         * @see StagePosition#getCol()
+         */
+=======
+*
+         * @see GridPosition#getCol()
+
+
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+        @Override
+        public int getCol() {
+            return col;
+        }
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+        /**
+         * @see StagePosition#getRow()
+         */
+=======
+*
+         * @see GridPosition#getRow()
+
+
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+        @Override
+        public int getRow() {
+            return row;
+        }
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+        /**
+/*         * @see StagePosition#getColor()
+=======
+*
+         * @see GridPosition#getColor()
+
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+
+        @Override
+        public StageColor
+        getColor() {
+            return color;
+        }
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+        *
+         * @see StagePosition#setColor(StageColor
+         * )
+=======
+*
+         * @see GridPosition#setColor(GridColor)
+
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+
+        @Override
+        public void setColor(StageColor
+                                             color) {
+            this.color = color;
+            show();
+        }*/
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+        /**
+         * @see StagePosition#moveInDirection(StageDirection, int)
+         */
+=======
+*
+         * @see GridPosition#moveInDirection(GridDirection, int)
+
+
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+        @Override
+        public void moveInDirection(StageDirection direction, int distance) {
+
+            switch (direction) {
+
+                case UP:
+                    moveUp(distance);
+                    break;
+            }
+
+        }
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/AbstractStagePosition.java
+        /**
+         * @see StagePosition#equals(StagePosition)
+         */
+=======
+*
+         * @see GridPosition#equals(GridPosition)
+
+
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/AbstractGridPosition.java
+        @Override
+        public boolean equals(StagePosition pos) {
+            return this.col == pos.getCol() && this.row == pos.getRow();
+        }
+
+*
+         * Moves the position up
+         *
+         * @param dist the number of positions to move
+
+
+        public void moveUp(int dist) {
+
+            int maxRowsUp = dist < getRow() ? dist : getRow();
+            setPos(getCol(), getRow() - maxRowsUp);
+
+        }
+
+*
+         * Moves the position down
+         *
+         * @param dist the number of positions to move
+
+
+        public void moveDown(int dist) {
+
+            int maxRowsDown = dist > getStage().getRows() - (getRow() + 1) ? getStage().getRows() - (getRow() + 1) : dist;
+            setPos(getCol(), getRow() + maxRowsDown);
+
+        }
+
+*
+         * Moves the position left
+         *
+         * @param dist the number of positions to move
+
+
+        public void moveLeft(int dist) {
+
+            int maxRowsLeft = dist < getCol() ? dist : getCol();
+            setPos(getCol() - maxRowsLeft, getRow());
+
+        }
+
+*
+         * Moves the position right
+         *
+         * @param dist the number of positions to move
+
+
+        public void moveRight(int dist) {
+            int maxRowsRight = dist > getStage().getCols() - (getCol() + 1) ? getStage().getCols() - (getCol() + 1) : dist;
+            setPos(getCol() + maxRowsRight, getRow());
+        }
+
+        @Override
+        public String toString() {
+            return "StagePosition{" +
+                    "col=" + col +
+                    ", row=" + row +
+                    '}';
+        }
+*/
+
+}

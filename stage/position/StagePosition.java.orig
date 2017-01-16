@@ -1,0 +1,117 @@
+package org.academniadecodigo.dancedance.stage.position;
+
+import org.academniadecodigo.dancedance.stage.StageDirection;
+
+/**
+ * A position on the stage that is capable of moving around
+ */
+public interface StagePosition {
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/StagePosition.java
+    /**
+     * Gets the position column in the stage
+=======
+ /*   *
+     * Gets the position column in the grid
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/GridPosition.java
+     *
+     * @return the position column
+
+    public int getCol();
+
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/StagePosition.java
+    /**
+     * Gets the position row in the stage
+=======
+    *
+     * Gets the position row in the grid
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/GridPosition.java
+     *
+     * @return the position row
+
+    public int getRow();
+
+    *
+     * Updates the position column and row
+     *
+     * @param col the new position column
+     * @param row the new position row
+
+    public void setPos(int col, int row);
+
+    *
+     * Gets the position getColor
+     *
+     * @return the position getColor
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/StagePosition.java
+     */
+   /* public StageColor getColor();
+
+    *//**//**//**//**
+     * Changes the getColor of this stage position
+     *
+     * @param color the new position getColor
+     *//**//**//**//*
+    public void setColor(StageColor color);
+
+    *//**//**//**//**
+     * Displays the position in the stage
+     */
+    public void show();
+
+    /**
+     * Hides the position in the stage
+     */
+    public void hide();
+
+    /**
+     * Moves this stage position towards a specified direction
+     *
+     * @param direction the direction to move to
+     * @param distance  the number of positions to move
+     */
+    public void moveInDirection(StageDirection direction, int distance);
+=======
+
+    public GridColor getColor();
+
+    *
+     * Changes the getColor of this grid position
+     *
+     * @param color the new position getColor
+
+    public void setColor(GridColor color);
+
+    *
+     * Displays the position in the grid
+
+    public void show();
+
+    *
+     * Hides the position in the grid
+
+    public void hide();
+
+    *
+     * Moves this grid position towards a specified direction
+     *
+     * @param direction the direction to move to
+     * @param distance  the number of positions to move
+
+    public void moveInDirection(GridDirection direction, int distance);
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/GridPosition.java
+
+    *
+     * Tests equality with another position
+     *
+     * @param position the position to test against
+     * @return true if positions are equal
+<<<<<<< HEAD:src/org/academniadecodigo/dancedance/stage/position/StagePosition.java
+     */
+    //public boolean equals(StagePosition position);
+=======
+
+    public boolean equals(GridPosition position);*/
+>>>>>>> 75af7a18e957a7765102ff25d0403e8049a851d8:src/org/academniadecodigo/dancedance/stage/position/GridPosition.java
+
+}
